@@ -1,6 +1,6 @@
 # Anime-Quotes-Generator
 
-## A simple app that generates random anime quotes.
+## A simple app that generates random anime quotes. [Check it here!](https://iulian-u.github.io/Anime-Quotes-Generator/)
 
 I created this app while learning about Javascript and APIs. The app is made using pure HTML, CSS and Javascript.
 
