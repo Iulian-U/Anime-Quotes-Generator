@@ -12,7 +12,6 @@ const URL = "https://animechan.vercel.app/api/random";
 //every time button clicked add new p to the divs and include info from API
 getQuote.addEventListener("click", () => {
   getData().then((data) => {
-    console.log(data.character);
     animeTitle.innerText = data.anime;
     animeQuote.innerText = data.quote;
     animeCharacter.innerText = data.character;
@@ -21,7 +20,11 @@ getQuote.addEventListener("click", () => {
 
 //retrieve data from API
 const getData = async () => {
-  const response = await fetch(URL);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(URL);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    animeTitle.innerText = "Sorry! Couldn't find any quote! :(";
+  }
 };
